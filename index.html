@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Peptides | Quality Research Supply</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner-content">
+            <div class="spinner"></div>
+            <p>Getting things ready...</p>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">G</span>
+                <span class="logo-text">Global Peptides</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="#specifications">Specifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-text">QUALITY TESTED • FAST SHIPPING</span>
+            </div>
+            <h1 class="hero-title">Reliable Peptides for Your Research</h1>
+            <p class="hero-subtitle">Quality peptides for lab use. Simple, secure crypto payments and worldwide shipping.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="99.9">0</span>
+                    <span class="stat-label">% Pure Peptides</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5000">0</span>
+                    <span class="stat-label">Research Partners</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="24">0</span>
+                    <span class="stat-label">Support Hours</span>
+                </div>
+            </div>
+            <div class="hero-features">
+                <span class="feature-tag"><i class="fas fa-vial"></i> Lab Verified</span>
+                <span class="feature-tag"><i class="fas fa-shield-alt"></i> Crypto Only</span>
+                <span class="feature-tag"><i class="fas fa-truck"></i> Fast Global Shipping</span>
+                <span class="feature-tag"><i class="fas fa-certificate"></i> Tested for Purity</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="catalog.html" class="cta-button primary">Explore Catalog</a>
+                <a href="#specifications" class="cta-button secondary">View Specifications</a>
+            </div>
+        </div>
+        <div class="hero-floating-elements">
+            <div class="floating-element element-1">
+                <i class="fas fa-dna"></i>
+            </div>
+            <div class="floating-element element-2">
+                <i class="fas fa-flask"></i>
+            </div>
+            <div class="floating-element element-3">
+                <i class="fas fa-microscope"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="trust-section" id="why-choose-us" style="padding: 100px 0; background: var(--card-bg);">
+        <div class="container">
+            <h2 class="section-title">Why Choose Global Peptides?</h2>
+            <div class="trust-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="trust-card" style="background: var(--light-gray); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);">
+                    <div class="trust-icon" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">500+ Verified Reviews</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Our community speaks for itself. With over 500 genuine reviews from researchers worldwide, we maintain a reputation built on transparency and consistent results.</p>
+                </div>
+
+                <div class="trust-card" style="background: var(--light-gray); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);">
+                    <div class="trust-icon" style="font-size: 3rem; color: var(--medical-green); margin-bottom: 1.5rem;">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Purity Guaranteed</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Every batch is rigorously tested for 99%+ purity. We don't just sell peptides; we provide the precision you need for your critical research goals.</p>
+                </div>
+
+                <div class="trust-card" style="background: var(--light-gray); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);">
+                    <div class="trust-icon" style="font-size: 3rem; color: #f59e0b; margin-bottom: 1.5rem;">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Trusted Since 2023</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Global Peptides has been a cornerstone of the research community since 2023. Our secure payment systems and tracked shipping ensure your peace of mind.</p>
+                </div>
+
+                <div class="trust-card" style="background: var(--light-gray); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);">
+                    <div class="trust-icon" style="font-size: 3rem; color: #8b5cf6; margin-bottom: 1.5rem;">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Sourcing Made Simple</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Can't find a reliable source? We do the hard work for you. We track down every legitimate, high-purity source available to ensure your research never stops. We make life easier by bridging the gap between quality and availability.</p>
+                </div>
+
+                <div class="trust-card" style="background: var(--light-gray); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: var(--transition);">
+                    <div class="trust-icon" style="font-size: 3rem; color: #10b981; margin-bottom: 1.5rem;">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Crypto-Only Privacy</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Visa and Mastercard have made life harder by canceling processors for research compounds. We use crypto to provide total anonymity and a hassle-free checkout. No blocked transactions—just a secure, private way to fund your research.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="reviews.html" class="cta-button primary" style="display: inline-block; text-decoration: none;">Read Our Success Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="specifications-section" id="specifications">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            <div class="specs-tabs">
+                <button class="tab-btn active" data-tab="quality">Quality Standards</button>
+                <button class="tab-btn" data-tab="analysis">Analytical Methods</button>
+                <button class="tab-btn" data-tab="storage">Storage Guidelines</button>
+                <button class="tab-btn" data-tab="handling">Handling Protocols</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="quality">
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <div class="spec-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <h3>Pure Quality</h3>
+                            <ul>
+                                <li>99%+ purity guaranteed</li>
+                                <li>No unwanted fillers</li>
+                                <li>Lab tested for consistency</li>
+                                <li>Clean, stable powders</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <div class="spec-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h3>Our Approach</h3>
+                            <ul>
+                                <li>Independent lab testing</li>
+                                <li>Transparent batch reports</li>
+                                <li>Carefully managed facility</li>
+                                <li>Researcher-focused quality</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <div class="spec-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h3>Testing Methods</h3>
+                            <ul>
+                                <li>HPLC analysis</li>
+                                <li>Mass spectrometry</li>
+                                <li>AA analysis</li>
+                                <li>Residual solvents testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="analysis">
+                    <div class="analysis-content">
+                        <h3>How We Test</h3>
+                        <div class="analysis-grid">
+                            <div class="analysis-item">
+                                <h4>HPLC Purity Check</h4>
+                                <p>We use high-performance liquid chromatography to make sure every vial meets our strict purity mark.</p>
+                            </div>
+                            <div class="analysis-item">
+                                <h4>Mass Spectrometry</h4>
+                                <p>We confirm the molecular identity of every peptide so you know exactly what's in your shipment.</p>
+                            </div>
+                            <div class="analysis-item">
+                                <h4>Batch Verification</h4>
+                                <p>Each new batch is cross-referenced with previous results to maintain total consistency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="storage">
+                    <div class="storage-content">
+                        <h3>Keep Them Fresh</h3>
+                        <div class="storage-grid">
+                            <div class="storage-item">
+                                <h4>Temperature</h4>
+                                <p>Keep at -20°C for long-term storage. A standard fridge (2-8°C) is fine for short periods.</p>
+                            </div>
+                            <div class="storage-item">
+                                <h4>Environment</h4>
+                                <p>Store away from light and moisture. Keep the vials sealed until you're ready to use them.</p>
+                            </div>
+                            <div class="storage-item">
+                                <h4>Best Practices</h4>
+                                <p>Use amber glass if transferring, but our original vials are designed for long-term stability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="handling">
+                    <div class="handling-content">
+                        <h3>Handling Your Shipment</h3>
+                        <div class="protocol-grid">
+                            <div class="protocol-item">
+                                <h4>Safety First</h4>
+                                <p>Always use gloves and a clean workspace when handling the research materials.</p>
+                            </div>
+                            <div class="protocol-item">
+                                <h4>Mixing Guide</h4>
+                                <p>Use sterile water or a proper buffer. Mix gently—don't shake or use a vortex.</p>
+                            </div>
+                            <div class="protocol-item">
+                                <h4>Lab Disposal</h4>
+                                <p>Follow your local lab safety rules for disposal. Keep your research area clean.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart (<span id="cartItemCount">0</span>)</h3>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <div class="total-row">
+                        <span>Subtotal (USD):</span>
+                        <span class="total-amount">$<span id="cartSubtotal">0.00</span></span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping (USD):</span>
+                        <span class="total-amount">$<span id="cartShipping">0.00</span></span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total (USD):</span>
+                        <span class="total-amount">$<span id="cartTotal">0.00</span></span>
+                    </div>
+                    <div class="total-row crypto-total">
+                        <span id="cartCryptoLabel">Total (BTC):</span>
+                        <span class="btc-amount"><span id="btcTotal">0.000000</span> <span id="cartCryptoUnit">BTC</span></span>
+                    </div>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Go to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Complete Your Order</h2>
+            <form class="checkout-form" id="checkoutForm">
+                <div class="form-section">
+                    <h3>Customer Information</h3>
+                    <div class="form-group">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Shipping Address</h3>
+                    <div class="form-group">
+                        <input type="text" id="address" placeholder="Street Address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="city" placeholder="City" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="state" placeholder="State/Province">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="zipCode" placeholder="ZIP/Postal Code" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <div class="payment-option active" data-method="bitcoin">
+                            <i class="fab fa-bitcoin"></i>
+                            <span>Bitcoin</span>
+                        </div>
+                        <div class="payment-option" data-method="ethereum">
+                            <i class="fab fa-ethereum"></i>
+                            <span>Ethereum</span>
+                        </div>
+                        <div class="payment-option" data-method="usdt">
+                            <i class="fas fa-coins"></i>
+                            <span>USDT</span>
+                        </div>
+                    </div>
+                    <div id="addressDisplay" class="address-display" style="display: none;">
+                        <h4 id="paymentHeader">Pay to this Address</h4>
+                        <div class="timer-container">
+                            Payment expires in: <span id="paymentTimer">30:00</span>
+                        </div>
+                        <div class="address-item amount-item">
+                            <p><strong>Copy this amount:</strong></p>
+                            <code id="displayAmount">0.000000</code>
+                        </div>
+                        <div class="address-item">
+                            <p><strong id="methodLabel">Address:</strong></p>
+                            <code id="displayAddress"></code>
+                        </div>
+                        <button type="button" id="ivePaidBtn" class="ive-paid-btn">I've paid</button>
+                    </div>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-items" id="summaryItems">
+                        <!-- Order items will be shown here -->
+                    </div>
+                    <div class="summary-total">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span>$<span id="summarySubtotal">0.00</span></span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping:</span>
+                            <span>$<span id="summaryShipping">0.00</span></span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total:</span>
+                            <span class="total-amount">$<span id="summaryTotal">0.00</span></span>
+                        </div>
+                        <div class="total-row crypto-total">
+                            <span id="cryptoTotalLabel">Total in BTC:</span>
+                            <span class="btc-amount"><span id="summaryBTCTotal">0.000000</span> <span id="cryptoUnit">BTC</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="place-order-btn">Purchase</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content confirmation-content">
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Processing</h2>
+            <p>Your Order is now Processing you will recieve an email with billing and product infomation, thank you for using global peptides.</p>
+            <div class="order-details">
+                <p><strong>Order Number:</strong> <span id="orderNumber">#PEP-XXXXXX</span></p>
+                <p><strong>Total Paid:</strong> <span id="paidAmount">0.000000 BTC</span></p>
+            </div>
+            <button class="btn-secondary" id="closeConfirmation">Continue Shopping</button>
+        </div>
+    </div>
+
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Global Peptides</h2>
+            <div class="about-content">
+                <p>We provide high-quality peptides to laboratories and researchers worldwide. Our focus is on consistency and reliable supply for your scientific needs.</p>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <h3>Quality Assurance</h3>
+                        <p>All our peptides undergo rigorous testing and quality control to ensure research-grade purity.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Discreet Shipping</h3>
+                        <p>Secure and confidential worldwide delivery with tracking and insurance.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fab fa-bitcoin"></i>
+                        </div>
+                        <h3>Crypto Payments</h3>
+                        <p>Accepting Bitcoin and Ethereum for enhanced privacy and security.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Research Focused</h3>
+                        <p>Dedicated to advancing scientific research and medical breakthroughs globally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">G</span>
+                    <span class="logo-text">Global Peptides</span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="catalog.html">BPC-157</a></li>
+                            <li><a href="catalog.html">TB-500</a></li>
+                            <li><a href="catalog.html">Ipamorelin</a></li>
+                            <li><a href="catalog.html">CJC-1295</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#specifications">Research</a></li>
+                            <li><a href="#specifications">Quality</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Global Peptides. All rights reserved. For research purposes only.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

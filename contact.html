@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Global Peptides</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner-content">
+            <div class="spinner"></div>
+            <p>Loading Contact Page...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <span class="logo-icon">G</span>
+                <span class="logo-text">Global Peptides</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="index.html#specifications">Specifications</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact" style="margin-top: 100px; min-height: 80vh;">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Support</h4>
+                            <p>support@globalpeptides.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-headset"></i>
+                        <div>
+                            <h4>Support</h4>
+                            <p>24/7 Research Support</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-lock"></i>
+                        <div>
+                            <h4>Security</h4>
+                            <p>Military-grade encryption</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Order Number (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart (<span id="cartItemCount">0</span>)</h3>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <div class="total-row">
+                        <span>Subtotal (USD):</span>
+                        <span class="total-amount">$<span id="cartSubtotal">0.00</span></span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping (USD):</span>
+                        <span class="total-amount">$<span id="cartShipping">0.00</span></span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total (USD):</span>
+                        <span class="total-amount">$<span id="cartTotal">0.00</span></span>
+                    </div>
+                    <div class="total-row crypto-total">
+                        <span id="cartCryptoLabel">Total (BTC):</span>
+                        <span class="btc-amount"><span id="btcTotal">0.000000</span> <span id="cartCryptoUnit">BTC</span></span>
+                    </div>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Go to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Complete Your Order</h2>
+            <form class="checkout-form" id="checkoutForm">
+                <div class="form-section">
+                    <h3>Customer Information</h3>
+                    <div class="form-group">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Shipping Address</h3>
+                    <div class="form-group">
+                        <input type="text" id="address" placeholder="Street Address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="city" placeholder="City" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="state" placeholder="State/Province">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="zipCode" placeholder="ZIP/Postal Code" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <div class="payment-option active" data-method="bitcoin">
+                            <i class="fab fa-bitcoin"></i>
+                            <span>Bitcoin</span>
+                        </div>
+                        <div class="payment-option" data-method="ethereum">
+                            <i class="fab fa-ethereum"></i>
+                            <span>Ethereum</span>
+                        </div>
+                        <div class="payment-option" data-method="usdt">
+                            <i class="fas fa-coins"></i>
+                            <span>USDT</span>
+                        </div>
+                    </div>
+                    <div id="addressDisplay" class="address-display" style="display: none;">
+                        <h4 id="paymentHeader">Pay to this Address</h4>
+                        <div class="timer-container">
+                            Payment expires in: <span id="paymentTimer">30:00</span>
+                        </div>
+                        <div class="address-item amount-item">
+                            <p><strong>Copy this amount:</strong></p>
+                            <code id="displayAmount">0.000000</code>
+                        </div>
+                        <div class="address-item">
+                            <p><strong id="methodLabel">Address:</strong></p>
+                            <code id="displayAddress"></code>
+                        </div>
+                        <button type="button" id="ivePaidBtn" class="ive-paid-btn">I've paid</button>
+                    </div>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-items" id="summaryItems">
+                        <!-- Order items will be shown here -->
+                    </div>
+                    <div class="summary-total">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span>$<span id="summarySubtotal">0.00</span></span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping:</span>
+                            <span>$<span id="summaryShipping">0.00</span></span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total:</span>
+                            <span class="total-amount">$<span id="summaryTotal">0.00</span></span>
+                        </div>
+                        <div class="total-row crypto-total">
+                            <span id="cryptoTotalLabel">Total in BTC:</span>
+                            <span class="btc-amount"><span id="summaryBTCTotal">0.000000</span> <span id="cryptoUnit">BTC</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="place-order-btn">Purchase</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content confirmation-content">
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Processing</h2>
+            <p>Your Order is now Processing you will receive an email with billing and product infomation, thank you for using global peptides.</p>
+            <div class="order-details">
+                <p><strong>Order Number:</strong> <span id="orderNumber">#PEP-XXXXXX</span></p>
+                <p><strong>Total Paid:</strong> <span id="paidAmount">0.000000 BTC</span></p>
+            </div>
+            <button class="btn-secondary" id="closeConfirmation">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                    <span class="logo-icon">G</span>
+                    <span class="logo-text">Global Peptides</span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="catalog.html">BPC-157</a></li>
+                            <li><a href="catalog.html">TB-500</a></li>
+                            <li><a href="catalog.html">Ipamorelin</a></li>
+                            <li><a href="catalog.html">CJC-1295</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#specifications">Research</a></li>
+                            <li><a href="index.html#specifications">Quality</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Global Peptides. All rights reserved. For research purposes only.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
